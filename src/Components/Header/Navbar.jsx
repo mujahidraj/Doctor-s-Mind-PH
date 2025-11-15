@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import '../../Styles/styles.css'
 import logo from '../../assets/images/logo.png'
 
@@ -15,15 +15,17 @@ const Navbar = () => {
             <ul
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <NavLink><li className='text-lg font-medium '>Home</li></NavLink>
-              <NavLink><li className='text-base font-medium '>My-Bookings</li></NavLink>
-              <NavLink><li className='text-base font-medium '>Blogs</li></NavLink>
+              <NavLink to='/'><li className='text-lg font-medium '>Home</li></NavLink>
+              <NavLink to='/bookings'><li className='text-base font-medium '>My-Bookings</li></NavLink>
+              <NavLink to='/blogs'><li className='text-base font-medium '>Blogs</li></NavLink>
               <NavLink><li className='text-base font-medium '>Contact Us</li></NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl pacifico uppercase">
-            
-            <img src={logo} alt="" />Doctor's Mind</a>
+          <Link to={`/`}>
+            <a className="btn btn-ghost text-xl pacifico uppercase">
+              <img src={logo} alt="" />Doctor's Mind
+            </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal jakarta flex flex-row gap-5 px-1">
