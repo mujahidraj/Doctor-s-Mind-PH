@@ -15,7 +15,7 @@ const DoctorCard = ({ doctor }) => {
 
   return (
     <div>
-      <div className='w-[335px] shadow-slate-300 shadow-sm flex flex-col bg-white rounded-lg p-5'>
+      <div className='sm:w-[335px] w-[380px] mx-auto shadow-slate-300 shadow-sm flex flex-col bg-white rounded-lg p-5'>
         <img src={doctor.doctorImage} className='h-60 rounded-lg' alt="" />
 
 

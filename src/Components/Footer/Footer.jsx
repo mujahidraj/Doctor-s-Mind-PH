@@ -7,7 +7,7 @@ const Footer = () => {
 
       <footer className="footer jakarta sm:footer-horizontal bg-[#176AE5] text-white p-10">
         <aside>
-          <h className="pacifico text-3xl">DOCTOS'S MIND</h>
+          <h1 className="pacifico text-3xl">DOCTOS'S MIND</h1>
           <p>
             TechWisdom Industries Ltd.
             <br />

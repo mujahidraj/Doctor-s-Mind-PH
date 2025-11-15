@@ -17,7 +17,7 @@ const DoctorsLists = ({doctorsData}) => {
         Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.
       </p>
 
-      <div className='grid sm:grid-cols-3  my-14 grid-cols-1 gap-10'>
+      <div className='grid sm:grid-cols-3  sm:my-14 grid-cols-1 items-center justify-center gap-10'>
         {
         doctorsData.map(doctor=><DoctorCard key={doctor.registrationNumber} doctor={doctor}></DoctorCard>)
       }
