@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
 import '../../Styles/styles.css'
 import exlclaim from '../../Assets/images/Frame.svg'
 import { addToLocalStorage } from '../../Utilities/storeAppointmentToLocal';
@@ -45,7 +45,7 @@ const DoctorsInfo = () => {
          </div>
           <p className='jakarta text-base font-medium mt-2 text-[#141414B2]'>Working At: <span className='text-[#176AE5] font-bold'>{doctor.workingPlace}</span></p>
           <p className='jakarta text-base font-medium mt-2 text-[#141414B2]'>Working Area: <span className='text-[#176AE5]'>{doctor.workingArea}</span></p>
-          <p className='jakarta text-base font-medium mt-2 text-[#141414B2]'>Consultation Fee: <span className='text-[#176AE5]'>${doctor.consultationFee}</span></p>
+          <p className='jakarta text-base font-medium mt-2 text-[#141414B2]'>Consultation Fee: <span className='text-[#176AE5]'>${doctor.consultationFee}</span> <span className='text-[#176AE5]/50'>+ vat</span></p>
 
         </div>
       </div>
@@ -62,7 +62,9 @@ const DoctorsInfo = () => {
           <img src={exlclaim} alt="Exclamation Icon" />
         <p className='  text-amber-500'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
         </div>
+        <Link to={`/bookings`}>
         <button onClick={()=>handleOnClick(doctor.id)} className={`${ doctor.availabilityDays.includes(dayToCheck) ? "" : "hidden"} bg-[#176AE5] w-full text-white px-4 py-2 rounded-full `} >Book Appointment Now</button>
+        </Link>
       </div>
 
 

@@ -4,7 +4,7 @@ import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
 
 const getAppointment =()=>{
-  const storedAppointmentSTR = localStorage.getItem("readlist");
+  const storedAppointmentSTR = localStorage.getItem("appointment");
   
   if(storedAppointmentSTR) {
     const storedAppointmentData = JSON.parse(storedAppointmentSTR);
@@ -13,6 +13,13 @@ const getAppointment =()=>{
   else{
     return []
   }
+}
+
+const removeFromLocalStorage = (id) => {
+  const storedAppointmentData = getAppointment();
+  const remainingAppointments = storedAppointmentData.filter(appointmentId => appointmentId !== id);
+  const data = JSON.stringify(remainingAppointments);
+  localStorage.setItem("appointment", data);
 }
 
 const addToLocalStorage = (id) => {
@@ -30,7 +37,7 @@ const addToLocalStorage = (id) => {
   else{
     storeAppointmentData.push(id)
     const data = JSON.stringify(storeAppointmentData);
-    localStorage.setItem("readlist", data)
+    localStorage.setItem("appointment", data)
 
     // sweetAlert
     Swal.fire({
@@ -41,4 +48,4 @@ const addToLocalStorage = (id) => {
   }
 }
 
-export {addToLocalStorage ,getAppointment};
+export {addToLocalStorage ,getAppointment, removeFromLocalStorage};
