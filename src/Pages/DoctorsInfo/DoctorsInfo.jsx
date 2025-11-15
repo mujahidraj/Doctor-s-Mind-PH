@@ -22,6 +22,17 @@ const DoctorsInfo = () => {
 
   return (
     <div className='my-24 bg-slate-100 mx-10 '>
+
+      <div className="breadcrumbs text-sm">
+        <ul>
+          <li className='italic font-medium'><a>Home</a></li>
+          <li className='italic font-medium'><a>Doctor's info</a></li>
+          <li className='italic font-medium'><a>{doctor.name}</a></li>
+
+        </ul>
+      </div>
+
+
       <h2 className='jakarta text-center text-4xl font-extrabold'>Doctor’s Profile Details</h2>
       <p className='jakarta text-center my-3 text-[#141414B2] font-medium'>Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis turpis imperdiet mattis donec dignissim volutpat.</p>
 

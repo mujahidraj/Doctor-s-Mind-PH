@@ -8,6 +8,14 @@ const Blogs = () => {
 
   return (
     <div className='my-20 mx-10'>
+      <div className="breadcrumbs text-sm">
+        <ul>
+          <li className='italic font-medium'><a>Home</a></li>
+          <li className='italic font-medium'><a>Blogs</a></li>
+          
+
+        </ul>
+      </div>
       {
         blogsData.map(blog => <Accordion key={blog.id} blog={blog}></Accordion>)
       }

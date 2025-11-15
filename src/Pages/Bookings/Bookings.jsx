@@ -42,7 +42,15 @@ const Bookings = () => {
   };
 
   return (
-    <div className='mt-20' style={{ width: '100%' }}>
+    <div className='mt-20 sm:mx-10' style={{ width: '100%' }}>
+      <div className="breadcrumbs text-sm">
+        <ul>
+          <li className='italic font-medium'><a>Home</a></li>
+          <li className='italic font-medium'><a>My booking</a></li>
+          
+
+        </ul>
+      </div>
 
 
       {
@@ -79,6 +87,7 @@ const Bookings = () => {
 
 
       <div>
+        
         <h2 className='text-3xl font-extrabold jakarta text-center my-10'>My Booked Appointments</h2>
         {
           storeAppointment.length === 0 ? <p className='text-center text-red-500 jakarta text-xl font-medium my-10'>You have no booked appointments yet.</p> : <div className='sm:px-10 px-4'>
