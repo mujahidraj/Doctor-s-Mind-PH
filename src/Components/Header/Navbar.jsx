@@ -27,10 +27,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal jakarta flex flex-row gap-5 px-1">
-            <NavLink><li className='text-base font-medium '>Home</li></NavLink>
-            <NavLink><li className='text-base font-medium '>My-Bookings</li></NavLink>
-            <NavLink><li className='text-base font-medium '>Blogs</li></NavLink>
-            <NavLink><li className='text-base font-medium '>Contact Us</li></NavLink>
+            <NavLink to={`/`}><li className='text-base font-medium '>Home</li></NavLink>
+            <NavLink to={`/bookings`}><li className='text-base font-medium '>My-Bookings</li></NavLink>
+            <NavLink to={`/blogs`}><li className='text-base font-medium '>Blogs</li></NavLink>
+            <NavLink to={`/contact`}><li className='text-base font-medium '>Contact Us</li></NavLink>
           </ul>
         </div>
         <div className="navbar-end">

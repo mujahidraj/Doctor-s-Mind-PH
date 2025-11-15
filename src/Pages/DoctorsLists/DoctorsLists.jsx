@@ -19,7 +19,7 @@ const DoctorsLists = ({doctorsData}) => {
 
       <div className='grid sm:grid-cols-3  sm:my-14 grid-cols-1 items-center justify-center gap-10'>
         {
-        doctorsData.map(doctor=><DoctorCard key={doctor.registrationNumber} doctor={doctor}></DoctorCard>)
+        doctorsData.map(doctor=><DoctorCard key={doctor.id} doctor={doctor}></DoctorCard>)
       }
       </div>
     </div>

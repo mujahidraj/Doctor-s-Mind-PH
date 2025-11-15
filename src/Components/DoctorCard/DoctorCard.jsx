@@ -1,5 +1,6 @@
 import React from 'react';
 import { CgProfile } from "react-icons/cg";
+import { Link } from 'react-router';
 
 
 const DoctorCard = ({ doctor }) => {
@@ -36,7 +37,10 @@ const DoctorCard = ({ doctor }) => {
             <h3>Reg.no : {doctor.registrationNumber}</h3>
           </div>
 
+         <Link to={`/doctors-info/${doctor.id}`}>
           <button className='btn border-sky-500 my-5 rounded-lg text-sky-500'>View Details</button>
+         </Link>
+         
 
       </div>
     </div>
