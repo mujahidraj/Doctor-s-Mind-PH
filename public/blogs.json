@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "What is React?",
+    "answer": "React is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies."
+  },
+  {
+    "id": 2,
+    "question": "What is JSX?",
+    "answer": "JSX (JavaScript XML) is a syntax extension for JavaScript that looks similar to XML or HTML. It is used with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between a Component and an Element?",
+    "answer": "A React Element is a plain object describing what you want to see on the screen (like a button or a heading). A React Component is a function or class that accepts props and returns a React Element."
+  },
+  {
+    "id": 4,
+    "question": "What is the difference between state and props?",
+    "answer": "Props (properties) are read-only and are passed down from a parent component to a child component. State is a local data storage that is private to the component and can be changed by the component itself to manage its internal data."
+  },
+  {
+    "id": 5,
+    "question": "What is a React Hook?",
+    "answer": "Hooks are functions that let you 'hook into' React state and lifecycle features from functional components. Common hooks include useState, useEffect, and useContext."
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of `useState`?",
+    "answer": "The `useState` hook is used to add state to functional components. It returns an array with two elements: the current state value and a function that lets you update it, which triggers a re-render."
+  },
+  {
+    "id": 7,
+    "question": "What is the purpose of `useEffect`?",
+    "answer": "The `useEffect` hook lets you perform side effects in functional components. Side effects include data fetching, setting up subscriptions, and manually changing the DOM after the component renders."
+  },
+  {
+    "id": 8,
+    "question": "What is the 'key' prop used for in lists?",
+    "answer": "A 'key' is a special string attribute you need to include when creating lists of elements. Keys help React identify which items have changed, are added, or are removed, which helps optimize rendering performance."
+  },
+  {
+    "id": 9,
+    "question": "What is a virtual DOM?",
+    "answer": "The virtual DOM (VDOM) is a programming concept where an ideal, or 'virtual', representation of a UI is kept in memory. React uses it to efficiently update the real DOM by comparing the virtual DOM with the real DOM and only applying the necessary changes."
+  },
+  {
+    "id": 10,
+    "question": "What is React Context?",
+    "answer": "Context provides a way to pass data through the component tree without having to pass props down manually at every level. It's used for managing global state like themes, user authentication, or language preferences."
+  },
+  {
+    "id": 11,
+    "question": "What is conditional rendering?",
+    "answer": "Conditional rendering in React works the same way conditions work in JavaScript. You can use JavaScript operators like `if` or the conditional operator (`condition ? true : false`) to create elements representing the current state."
+  },
+  {
+    "id": 12,
+    "question": "What is the difference between a functional component and a class component?",
+    "answer": "Class components are ES6 classes that extend React.Component and use lifecycle methods (like componentDidMount) and state. Functional components are simpler functions that, with the introduction of Hooks, can now manage state and side effects."
+  },
+  {
+    "id": 13,
+    "question": "What is prop drilling?",
+    "answer": "Prop drilling is the process of passing props from a higher-level parent component down to a deeply nested child component through intermediate components that don't actually need the prop. React Context is often used to avoid this."
+  },
+  {
+    "id": 14,
+    "question": "What is React Router?",
+    "answer": "React Router is a standard library for routing in React. It enables navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL."
+  },
+  {
+    "id": 15,
+    "question": "What is a controlled component?",
+    "answer": "A controlled component is a form element (like <input>, <textarea>, <select>) whose value is controlled by React state. The value is set by a prop, and any changes are handled by an event handler like `onChange`."
+  }
+]
