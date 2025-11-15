@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import '../../Styles/styles.css'
 import exlclaim from '../../Assets/images/Frame.svg'
+import { addToLocalStorage } from '../../Utilities/storeAppointmentToLocal';
 
 const DoctorsInfo = () => {
 
@@ -13,6 +14,11 @@ const DoctorsInfo = () => {
   const {id} = useParams(); 
   const doctorsData = useLoaderData()
   const doctor = doctorsData.find(doctor=>doctor.id === parseInt(id));
+
+
+  const handleOnClick = (id)=>{
+    addToLocalStorage(id)
+  }
 
   return (
     <div className='my-24 bg-slate-100 mx-10 '>
@@ -56,7 +62,7 @@ const DoctorsInfo = () => {
           <img src={exlclaim} alt="Exclamation Icon" />
         <p className='  text-amber-500'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
         </div>
-        <button className={`${ doctor.availabilityDays.includes(dayToCheck) ? "" : "hidden"} bg-[#176AE5] w-full text-white px-4 py-2 rounded-full `} >Book Appointment Now</button>
+        <button onClick={()=>handleOnClick(doctor.id)} className={`${ doctor.availabilityDays.includes(dayToCheck) ? "" : "hidden"} bg-[#176AE5] w-full text-white px-4 py-2 rounded-full `} >Book Appointment Now</button>
       </div>
 
 
