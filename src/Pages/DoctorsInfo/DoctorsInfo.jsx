@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import '../../Styles/styles.css'
-import exlclaim from '../../Assets/images/Frame.svg'
+import exlclaim from '../../assets/images/Frame.svg'
 import { addToLocalStorage } from '../../Utilities/storeAppointmentToLocal';
 
 const DoctorsInfo = () => {
